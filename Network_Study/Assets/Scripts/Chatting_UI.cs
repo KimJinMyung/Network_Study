@@ -40,8 +40,8 @@ public class Chatting_UI : NetworkBehaviour
     {
         if (!_ConnectNameDic.ContainsKey(sender))
         {
-           // var player = sender.identity.GetComponent<User>();
-           //_ConnectNameDic.Add(sender, player.Name);
+           var player = sender.identity.GetComponent<User>();
+           _ConnectNameDic.Add(sender, player.Name);
         }
 
         if(!string.IsNullOrWhiteSpace(msg))
