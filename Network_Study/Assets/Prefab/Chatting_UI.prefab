@@ -132,13 +132,37 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8177656251552001697}
+        m_TargetAssemblyTypeName: Chatting_UI, Assembly-CSharp
+        m_MethodName: OnClick_SendMsg
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8177656251552001697}
+        m_TargetAssemblyTypeName: Chatting_UI, Assembly-CSharp
+        m_MethodName: OnValueChanged_ToggleButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -517,7 +541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4539356830568350865}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8177656251552001697}
+        m_TargetAssemblyTypeName: Chatting_UI, Assembly-CSharp
+        m_MethodName: OnClick_Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &4539356830568350867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -593,6 +629,8 @@ GameObject:
   - component: {fileID: 4539356830949470762}
   - component: {fileID: 4539356830949470765}
   - component: {fileID: 4539356830949470764}
+  - component: {fileID: 8177656251552001697}
+  - component: {fileID: 4539356831421629312}
   m_Layer: 5
   m_Name: Chatting_UI
   m_TagString: Untagged
@@ -683,6 +721,42 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8177656251552001697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539356830949470767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28093003df80d140867d454ec26ec8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  Chat_History: {fileID: 4539356831789728551}
+  Scrollbar_Chat: {fileID: 4539356831579442732}
+  Input_ChatMsg: {fileID: 1050977765402538651}
+  Btn_Send: {fileID: 5392770316060986213}
+--- !u!114 &4539356831421629312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4539356830949470767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 2329004340
+  serverOnly: 0
+  visibility: 0
+  hasSpawned: 0
 --- !u!1 &4539356831029932379
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000022362532}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4539356831562105759
@@ -1027,7 +1101,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4539356831029932376}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99974805
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

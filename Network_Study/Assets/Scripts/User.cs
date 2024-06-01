@@ -6,19 +6,17 @@ using UnityEngine;
 public class User : NetworkBehaviour
 {
     [SyncVar]
-    private string playerName;
-
-    public string Name {  get { return playerName; } }
+    public string Name;
 
     public override void OnStartServer()
     {
-        base.OnStartServer();
-        playerName = (string)connectionToClient.authenticationData;
+        //base.OnStartServer();
+        Name = (string)connectionToClient.authenticationData;
     }
 
     public override void OnStartLocalPlayer()
     {
-        base.OnStartLocalPlayer();
+        //base.OnStartLocalPlayer();
         var chatUI = GameObject.Find("Chatting_UI");
         if(chatUI != null)
         {

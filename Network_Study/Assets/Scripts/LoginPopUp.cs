@@ -84,9 +84,18 @@ public class LoginPopUp : MonoBehaviour
         NetworkManager.singleton.StartHost();
         this.gameObject.SetActive(false);
     }
-    public void OnClick_StartAsClient()
+    public void OnClick_StartClient()
     {
         NetworkManager.singleton.StartClient();
         this.gameObject.SetActive(false);
+    }
+
+    public void SetUIOnClientDisconnected()
+    {
+        this.gameObject.SetActive(true);
+        _Input_ID.text = string.Empty;
+        _Input_Password.text = string.Empty;
+        _Input_ID.ActivateInputField();
+        _Input_Password.ActivateInputField();
     }
 }

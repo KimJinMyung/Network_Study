@@ -20,7 +20,6 @@ public class Chatting_UI : NetworkBehaviour
     {
         _localPlayerName = name;
     }
-
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -35,7 +34,7 @@ public class Chatting_UI : NetworkBehaviour
         Chat_History.text = string.Empty;
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     void CommandSendMsg(string msg, NetworkConnectionToClient sender = null)
     {
         if (!_ConnectNameDic.ContainsKey(sender))
@@ -47,7 +46,7 @@ public class Chatting_UI : NetworkBehaviour
         if(!string.IsNullOrWhiteSpace(msg))
         {
             var sendName = _ConnectNameDic[sender];
-            OnRpcMsg(sendName, msg);
+            OnRpcMsg(sendName, msg.Trim());
         }
     }
 
@@ -79,7 +78,7 @@ public class Chatting_UI : NetworkBehaviour
         Scrollbar_Chat.value = 0;
     }
 
-    public void OnClick_SendMsg()
+    public void SendMsg()
     {
         var currentChattingMsg = Input_ChatMsg.text;
 
@@ -99,11 +98,12 @@ public class Chatting_UI : NetworkBehaviour
         Btn_Send.interactable = !string.IsNullOrWhiteSpace(input);
     }
 
-    public void OnEndEdit_SendMsg(string input)
+    public void OnClick_SendMsg(string input)
     {
         if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetButtonDown("Submit"))
         {
-            OnClick_SendMsg();
+            SendMsg();
+            //OnClick_SendMsg
         }
     }
 }
