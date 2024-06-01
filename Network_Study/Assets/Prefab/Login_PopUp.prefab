@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 4286867003932694580}
   - component: {fileID: 445510818799380359}
   m_Layer: 5
-  m_Name: Login_ID_Input
+  m_Name: Login_Password_Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 6148275574810078211}
   - component: {fileID: 6148275574810078210}
   - component: {fileID: 6148275574810078269}
+  - component: {fileID: 5056271984339843800}
   m_Layer: 5
   m_Name: Login_PopUp
   m_TagString: Untagged
@@ -1001,6 +1002,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5056271984339843800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148275574810078268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad716c082c30354bab2707491a1207d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Input_ID: {fileID: 7771982601841645049}
+  _Input_Password: {fileID: 445510818799380359}
+  _Btn_Host: {fileID: 8262927980855189797}
+  _Btn_Client: {fileID: 4435583665770710825}
 --- !u!1 &6148275574889475631
 GameObject:
   m_ObjectHideFlags: 0
